@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href={% static 'attendance_cnf.css' %}>
+    <title>Done</title>
+</head>
+<body>
+    <h1 id="title">
+        <font color="yellow"> 
+          <center>
+           Training complete
+          </center>
+        </font>
+      </h1>
+      <div class="buttonElement-okay">
+        <button type="submit" class="btn-hover color-1" id="okay" onclick="window.location.href = '{% url 'landing' %}'"" >Okay</button>
+      </div>
+</body>
+</html>

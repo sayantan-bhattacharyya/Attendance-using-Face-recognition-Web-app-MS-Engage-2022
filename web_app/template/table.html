@@ -1,0 +1,57 @@
+<!-- Write HTML code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Reports</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href={% static 'reports.css' %}>
+</head>
+<body>
+
+<div class="container">
+<h2 class="text-center"><u>
+    <font color="yellow"> 
+    Today's Attendance Report 
+    </font>
+</u></h2><br>			
+<table class="table table-dark table-striped">
+	<thead>
+	<tr>
+		<th>Roll</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Today's Status</th>
+		<th>Attendance Percentage</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- jinja2 Technique -->
+	{% if d %}
+	{% for i in d %}
+	<tr>
+		<td>{{i.Roll}}</td>
+		<td>{{i.Name}}</td>
+		<td>{{i.Email}}</td>
+		<td>{{i.Status}}</td>
+		<td>{{i.Percentage}}</td>
+	</tr>
+	{% endfor %}
+	{% endif %}
+	</tbody>
+</table>
+</div>
+{% csrf_token %}
+<div class="buttonElement-mail">
+    <button type="submit" class="btn-hover color-1" id="train" onclick="window.location.href = '{% url 'sendemail' %}'">Send Status Email &#x2192</button>
+</div>
+<div class="buttonElement-back">
+    <button type="submit" class="btn-hover color-2" id ="back" onclick="window.location.href = '{% url 'landing' %}'">&#x2190 Back</button>
+</div>
+</body>
+</html>

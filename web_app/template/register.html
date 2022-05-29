@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href={% static 'style.css' %}>
+    
+  </head>
+  <body>
+	
+<div id="container_1"> 
+    <h1 id="title">
+      <font color="yellow"> 
+          Student Registration
+      </font>
+    </h1><!--title-->
+  <p id="description">
+    Enter the required data in the boxes.
+  </p><!--description--->   
+  </div><!---container_1--->
+  <div id="container_2">
+    <form id="survey-form" action="{% url 'regstudent' %}" method="post">
+      {% csrf_token %}
+      <label id="name-label">Name</label>
+        <input type="text" id="name" name="name" class="form"  placeholder="Enter your name" required="required"><br><!--name--->
+      <label id="email-label">Email</label>
+        <input type="email" id="email" name="email" class="form" placeholder="Enter your email" required="required"><br><!---email-->
+      <label id="Roll-label">Roll</label>
+        <input type="number" id="roll" name="roll" class="form" placeholder="Roll Number" min=1 required="required"><br><!---number-->
+      <label id="crs">Course</label>
+      <select id="dropdown" name="course" required="required">
+        <option disabled selected value>
+          Select your Course
+        </option>
+        <option value="BTech">
+          Bachelor of Technology
+        </option>
+        <option value="MTech">
+          Master of Technology
+        </option>
+        </select>
+
+        <label id="Stream">Stream</label>
+        <select id="dropdown" name="strm" required="required">
+          <option disabled selected value>
+            Select your Course
+          </option>
+          <option value="CSE">
+            Computer Science & Engineering(CSE)
+          </option>
+          <option value="EEE">
+            Electrical & Electronic Engineering(EEE)
+          </option>
+          <option value="ECE">
+            Electronic & Communication Engineering(ECE)
+          </option>
+          <option value="IT">
+            Information Technology(IT)
+          </option>
+          <option value="ME">
+            Mechanical Engineering(ME)
+          </option>
+          </select>
+
+      </select><!--dropdown--->
+      <p>Gender</p>
+      <label>
+        <input type="radio" name="gender" value="Male">Male
+      </label>
+      <label>
+        <input type="radio" name="gender" value="Female">Female
+      </label>
+      <label>
+        <input type="radio" name="gender" value="Other">I prefer not to answer
+      </label><!---radioButtons--->
+      <p>What is your year of study?</p>
+      <label>
+        <input type="radio" name="year" value="1" required="required">1st Year
+      </label>
+      <label>
+        <input type="radio" name="year" value="2" required="required">2nd Year
+      </label>
+      <label>
+        <input type="radio" name="year" value="3" required="required">3rd Year
+      </label>
+      <label>
+        <input type="radio" name="year" value="4" required="required">4th Year
+      </label>
+      <ul class="nav">
+      </ul>
+      <input type="submit" id="submit" name="submit"  value="Submit to Train Images &#x2192"  onclick="window.location.href = '{% url 'regstudent' %}'; "  required="required">
+      <p>
+        <input type="button" id="back" name="back" onclick="window.location.href = '{% url 'landing' %}' " value="&#x2190 Go Back">
+      </p>
+    </form><!---survey-form--->
+  </div><!--container_2--->
+  
+  </body>
+</html>

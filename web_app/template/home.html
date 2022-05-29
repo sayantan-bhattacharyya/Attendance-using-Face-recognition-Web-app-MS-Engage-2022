@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Welcome!!</title>
+	{% csrf_token %}
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href={% static 'landing_style.css' %}>
+</head>
+
+<body>
+
+	<div class="page-wrap">
+
+		<header>
+			<h1>Welcome, Admin</h1>
+			<p>Dashboard</p>
+		</header>
+
+		<nav>
+			<ul class="nav">
+				{% csrf_token %}
+				<li><a href={% url 'takeattendance' %} class="icon-camera" role="button" aria-label="Take Attandance"></a></li>
+				<li><a href={% url 'reg' %} class="icon-user" role="button" aria-label="New Student Registration"></a></li>
+				<li><a href={% url 'train_img' %} class="icon-wrench" role="button" aria-label="Train Model"></a></li>
+				<li><a href={% url 'table' %} class="icon-chart-bar" role="button" aria-label="View Attendance Report"></a></li>
+				<li><a href={% url 'logout' %} class="icon-logout" role="button" aria-label="Logout"></a></li>
+                <p style="margin: 50px -30px 0 -40px;    role="Text" aria-label="Actions available in this page">-----Take Attandance------New Student Registration------Train Model---------View Attendance Report---------Logout--------</p>
+			</ul>
+		</nav>
+
+	</div>
+
+</body>
+
+</html>

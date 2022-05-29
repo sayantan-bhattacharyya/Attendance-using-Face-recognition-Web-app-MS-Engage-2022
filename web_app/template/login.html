@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login-Admin</title>
+    {% load static %}
+<link rel="stylesheet" type="text/css" href={% static 'login.css' %}>
+</head>
+<body>
+<div class="login">
+    <h1>Login</h1>
+      <form method="POST" action="user_login/">
+        {% csrf_token %}
+        <input type="text" id="username" name="username" placeholder="Username" required="required" />
+          <input type="password" id="password" name="password" placeholder="Password" required="required" />
+          <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+      </form>
+      {% include 'messages.html' %}
+      {% block content %}
+      <script>
+        setTimeout(function(){
+          if ($('#msg').length > 0) {
+            $('#msg').remove();
+          }
+        }, 2000)
+      </script> 
+      {% endblock content %}
+  </div>
+</body>
+</html>
