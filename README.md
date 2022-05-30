@@ -41,6 +41,9 @@
 
 ![image](https://user-images.githubusercontent.com/76039263/170935933-e76a4efd-49b9-46d2-a1db-2ac61022a00b.png)
 
+![image](https://user-images.githubusercontent.com/76039263/170986476-60c5c630-1354-49e8-957e-ca0209296bab.png)
+
+
 ### Email Settings 
     Protocol used: SMTP
     Encryption used: TLS
