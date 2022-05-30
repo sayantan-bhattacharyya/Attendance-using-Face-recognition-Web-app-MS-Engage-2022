@@ -2,7 +2,7 @@
 ![Screenshot 2022-05-29 220729](https://user-images.githubusercontent.com/76039263/170936089-2617db88-b8f7-4209-aa5a-0a5dd34770ec.jpg)
 
 
-## Syanatan Bhattacharyya, Institute of Engineering & management, Kolkata
+## Syanatan Bhattacharyya, Institute of Engineering & Management, Kolkata
 
 ### Technologies used-
     1. Django
