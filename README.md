@@ -32,3 +32,8 @@
 
 ![image](https://user-images.githubusercontent.com/76039263/170935933-e76a4efd-49b9-46d2-a1db-2ac61022a00b.png)
 
+### Email Settings 
+    Protocol used: SMTP
+    Encryption used: TLS
+    Host : smtp.mail.yahoo.com
+
