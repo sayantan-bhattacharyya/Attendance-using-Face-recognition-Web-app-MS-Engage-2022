@@ -14,6 +14,15 @@
     username: bsaya
     password: adminengage2022
     
+### FEATURES:
+
+    1.Easy to use with interactive UI support.
+    2.Password protection for admin.
+    3.Updates database for deatils of students on registration.
+    4.Creates a new CSV file everyday for attendance and marks attendance with Percentage.
+    5.Displays live attendance updates for the day on the screen in tabular format with Roll, name, email, status, and percentage.
+    6.Sends notification emials to absentees.
+    
 ### Screen Shots:
 
 ![image](https://user-images.githubusercontent.com/76039263/170934583-23f83231-011a-4b4c-9307-34674a2c79b0.png)
@@ -36,4 +45,13 @@
     Protocol used: SMTP
     Encryption used: TLS
     Host : smtp.mail.yahoo.com
+    
+### ❓ How to use the app?
+
+    a.Download the files from GitHub.
+    b.Install all the modules given in requirements.txt file.
+    c.Run the following command in VS Code's terminal--
+        python manage.py runserver
+    d.Login using the credentials provided
+    e.Use the app
 
