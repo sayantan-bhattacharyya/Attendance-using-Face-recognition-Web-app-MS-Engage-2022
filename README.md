@@ -57,4 +57,13 @@
         python manage.py runserver
     d.Login using the credentials provided
     e.Use the app
+    
+### Note:
+    a.To delete student data, go to the address/admin    example(http://127.0.0.1:8000/admin)
+        Login using super user credentials
+        Select 'Student Datas' under the dashboard
+        Select the student(s) to delete, go to action and select delete selected student datas
+        Delete their images from the data directory
+    
+    b.It's important to keep the folders/dictories 'Data' & 'trainer'. You may remove the contents in them if required, but don't delete the folders
 
